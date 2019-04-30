@@ -2,28 +2,85 @@
     <html lang="en" dir="ltr">
       <head>
         <meta charset="utf-8">
-        <title>My server</title>
+        <title>Final project</title>
       </head>
-      <body style="background-color: yellow;">
-          <form action="seq" method="get">
-            Type a number if you want to set any limit: <br>
-            <input type="text" name="limit">
-            <br><br>
-            <input type="submit" value="SEND"/>
+      <body style="background-color: khaki;">
+          <form action="listSpecies" method="get">
+              <fieldset>
+                  <legend><h2>List species</h2></legend>
+                  Want a limit?: <input type="text" name="limit">
+                  <br><br>
+                  <input type="submit" value="SEND"/>
+              </fieldset>
           </form>
-          <form action="seq" method="get">
-            Species: <br>
-            <input type="text" name="specie">
-            <br><br>
-            <input type="submit" value="SEND"/>
+          <br><br>
+          <form action="karyotype" method="get">
+              <fieldset>
+                  <legend><h2>Get karyotype</h2></legend>
+                  Species: <br>
+                  <input type="text" name="specie">
+                  <br><br>
+                  <input type="submit" value="SEND"/>
+              </fieldset>
           </form>
-          <form action="seq" method="get">
-            Species: <br>
-            <input type="text" name="specie">
-            Chromosome number: <br>
-            <input type="text" name="chromo">
-            <br><br>
-            <input type="submit" value="SEND"/>
+          <br><br>
+          <form action="chromosomeLength" method="get">
+              <fieldset>
+                  <legend><h2>Compute chromosome's length</h2></legend>
+                  Species: <br>
+                  <input type="text" name="specie">
+                  <br><br>
+                  Chromosome: <br>
+                  <input type="text" name="chromo">
+                  <br><br>
+                  <input type="submit" value="SEND"/>
+              </fieldset>
+          </form>
+        <br><br>
+          <form action="geneSeq" method="get">
+              <fieldset>
+                  <legend><h2>Get gene's sequence</h2></legend>
+                  Gene: <br>
+                  <input type="text" name="gene">
+                  <br><br>
+                  <input type="submit" value="SEND"/>
+              </fieldset>
+          </form>
+        <br><br>
+          <form action="geneInfo" method="get">
+              <fieldset>
+                  <legend><h2>Retrieve gene's info</h2></legend>
+                  Gene: <br>
+                  <input type="text" name="gene">
+                  <br><br>
+                  <input type="submit" value="SEND"/>
+              </fieldset>
+          </form>
+        <br><br>
+          <form action="geneCal" method="get">
+              <fieldset>
+                  <legend><h2>Compute gene's length and percentages</h2></legend>
+                  Gene: <br>
+                  <input type="text" name="gene">
+                  <br><br>
+                  <input type="submit" value="SEND"/>
+              </fieldset>
+          </form>
+        <br><br>
+          <form action="geneList" method="get">
+              <fieldset>
+                  <legend><h2>List genes in chromosome</h2></legend>
+                  Chromosome: <br>
+                  <input type="text" name="chromo">
+                  <br><br>
+                  Start position: <br>
+                  <input type="text" name="start">
+                  <br><br>
+                  End position: <br>
+                  <input type="text" name="end">
+                  <br><br>
+                  <input type="submit" value="SEND"/>
+              </fieldset>
           </form>
       </body>
     </html>

@@ -1,10 +1,11 @@
 
 from Seq import Seq
 import http.server
+import http.client
 import socketserver
 import termcolor
-
-PORT = 8001
+import json
+import operator
 
 
 def read_contents(page):
@@ -13,14 +14,62 @@ def read_contents(page):
     return contents
 
 
-def command_processing(obj, com, let):
-    try:
-        if com == 'percentage':
-            return str(obj.perc(let))
-        elif com == 'count':
-            return str(obj.count(let))
-    except IndexError:
-        return 'Error'
+def get_json(ENDPOINT):
+
+    conn = http.client.HTTPSConnection("rest.ensembl.org")
+
+    additional = '?content-type=application/json'
+
+    if 'overlap' in ENDPOINT:
+
+        additional = additional + ';feature=gene;feature=transcript;feature=cds;feature=exon'
+
+    conn.request('GET', ENDPOINT + additional, None, {'User-Agent': 'http-client'})
+
+    r1 = conn.getresponse()
+
+    text_json = r1.read().decode("utf-8")
+    conn.close()
+
+    return json.loads(text_json)
+
+
+def check_gene(gene):
+
+    xrefs = get_json('/xrefs/symbol/human/{}'.format(gene))
+
+    if len(xrefs) == 0:
+
+        wrong = 'Error. The introduced gene does not exist.'
+
+    elif len(xrefs) > 1:
+        ids = []
+        genes = []
+
+        for i in xrefs:
+            ids.append(i['id'])
+
+        for i in ids:
+            if 'display_name' in get_json('/lookup/id/{}'.format(i)):
+                genes.append(get_json('/lookup/id/{}'.format(i))['display_name'])
+
+        wrong = 'Error. Maybe you meant any of the next genes: {} ...? Try again.'.format(', '.join(genes))
+
+    else:
+        return xrefs[0]['id']
+
+    return wrong
+
+
+def get_sequence(gene_id):               # maybe unnecessary????
+
+    seq = get_json('/sequence/id/{}'.format(gene_id))['seq']
+
+    return seq
+
+
+PORT = 8000
+socketserver.TCPServer.allow_reuse_address = True
 
 
 class TestHandler(http.server.BaseHTTPRequestHandler):
@@ -32,54 +81,194 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         termcolor.cprint(self.requestline, 'green')
         termcolor.cprint(self.path, 'blue')
 
+        # Basic level:
+
         if self.path == '/':
             contents = read_contents("main")
 
-        elif self.path == '/listSpecies':
+        elif '/listSpecies' in self.path:
+
             limit = self.path[self.path.index('=')+1:]
+            results = []
 
-            if type(limit) == int:
-                pass
-            elif limit > len(species_list) or limit < len(species_list):
-                results = 'That limit is outrange.'
-            else:
-                results = 'Sorry, that is not a valid limit'
+            if limit.isdigit() is True or limit == '':          # CHECK BC I HAVE CHANGED TO IS TRUE INSTEAD OF == TRUE
 
-        elif self.path == 'karyotype':
-            specie = self.path[self.path.index('=')+1:]
-            if specie in species_list:
+                c_names = []
 
+                species = get_json('/info/species')['species']
+                species.sort(key=operator.itemgetter('common_name'))
 
-        elif 'msg' in self.path:
-            message = self.path[self.path.index('=')+1:self.path.index('&')]
+                if limit != '' and limit != '0':
 
-            # Checking whether it's a valid sequence
-            if all(x in ['A', 'C', 'T', 'G'] for x in message.upper()) and message != '':
+                    if 0 < int(limit) <= len(species):
 
-                results = []
-                seq = Seq(message.upper())
-                results.append('Introduced sequence: {}'.format(seq.strbase))
-                requests = self.path[self.path.index('&')+1:].split('&')
-                letter = 'z'
+                        for i in range(int(limit)):
+                            c_names.append(species[i]['common_name'].capitalize())
 
-                for r in requests:
-                    if 'chk=on' in r:
-                        length = seq.len()
-                        results.append('Total length: {}'.format(length))
-                    elif 'base' in r:
-                        letter = r[-1]
-                    elif 'operation' in r:
-                        if letter != 'z':
-                            op = r.partition('=')[2]
-                            counting = command_processing(seq, op, letter)
-                            results.append('Operation {} on the {} base: {}'.format(op, letter, counting))
+                        for cn in enumerate(c_names, start=1):
+                            results.append('. '.join(map(str, cn)) + '<br>')
 
-                results = '<br>'.join(results)
+                        results = ''.join(results)
+
+                    elif int(limit) < 0:
+                        results = 'Sorry, that is not a valid limit'
+
+                    elif int(limit) >= len(species):
+                        results = 'That limit is outrange because there are not so many species.'
+
+                else:
+                    for n in species:
+                        c_names.append(n['common_name'].capitalize())
+
+                    for cn in enumerate(c_names, start=1):
+
+                        results.append('. '.join(map(str, cn)) + '<br>')
+
+                    results = ''.join(results)
 
             else:
-                results = 'Sorry, this sequence does not exist.\n'
+                results = 'Sorry, that is not a valid limit.'
 
-            contents = read_contents('result').format(results)
+            contents = read_contents('output').format(results)
+
+        elif '/karyotype' in self.path:
+
+            inspe = self.path[self.path.index('=')+1:]
+
+            if inspe != '':
+
+                if '+' in inspe:
+                    inspe = inspe.replace('+', '%20')
+
+                data = get_json('/info/assembly/{}'.format(inspe))
+                results = ['']
+
+                if 'error' not in data:
+                    for c in data['karyotype']:
+                        results.append(c)
+
+                    results = '\n<br>- '.join(results)
+
+                    if len(results) < 1:
+                        results = 'Our database does not have a karyotype associated to that species.'
+                else:
+                    results = 'Oops! We cannot find that species in our database.'
+
+            else:
+                results = 'In order to retrieve a karyotype, you must tell us which species you want it of.'
+
+            contents = read_contents('output').format(results)
+
+        elif '/chromosomeLength' in self.path:
+
+            inspe = self.path[self.path.index('=')+1:self.path.index('&')]
+            inchromo = self.path[self.path.index('&')+1:]
+            inchromo = inchromo[inchromo.index('=')+1:]
+
+            if inspe != '' and inchromo != '':
+
+                data = get_json('/info/assembly/{}/{}'.format(inspe, inchromo))
+
+                if 'error' not in data:
+                    results = 'The length of chromosome "{}" of species "{}" is ' \
+                              '{}.'.format(inchromo, inspe.capitalize(), data['length'])
+                else:
+                    results = 'Oops! Error. {}.'.format(data['error'])
+
+            else:
+                results = "In order to retrieve any chromosome's length, you must tell " \
+                          "us what chromosome of, and to which species it belongs."
+
+            contents = read_contents('output').format(results)
+
+        # Medium level:
+
+        elif '/geneSeq' in self.path:        # very very very long sequence. how to adjust??????
+
+            gene = self.path[self.path.index('=') + 1:]
+
+            gene_id = check_gene(gene)
+
+            if 'Error' not in gene_id:
+
+                results = '''Gene {}\'s sequence is:<br><br>{}.
+                '''.format(get_json('/lookup/id/{}'.format(gene_id))['display_name'], get_sequence(gene_id))
+
+            else:
+                results = gene_id
+
+            contents = read_contents('output').format(results)
+
+        elif '/geneInfo' in self.path:
+
+            gene_id = check_gene(self.path[self.path.index('=') + 1:])
+
+            if 'Error' not in gene_id:
+
+                info = get_json('/lookup/id/{}'.format(gene_id))
+
+                results = '''Gene {}:<br><br>
+                    -ID: {}<br>
+                    -In chromosome: {}<br>
+                    -Start: {}<br>
+                    -End: {}<br>
+                    -Length: {}<br>
+                    '''.format(info['display_name'], info['id'], info['seq_region_name'],
+                               info['start'], info['end'], len(get_sequence(gene_id)))
+
+            else:
+                results = gene_id
+
+            contents = read_contents('output').format(results)
+
+        elif '/geneCal' in self.path:
+
+            gene_id = check_gene(self.path[self.path.index('=') + 1:])
+
+            if 'Error' not in gene_id:
+
+                gene_seq = Seq(get_sequence(gene_id))
+
+                results = '''Gene {}:<br><br>
+                    -Total length: {}<br>
+                    -Percentage of its bases:<br>
+                        -A: {}%<br>
+                        -C: {}%<br>
+                        -G: {}%<br>
+                        -T: {}%'''.format(get_json('/lookup/id/{}'.format(gene_id))['display_name'],
+                                          gene_seq.len(), gene_seq.perc('A'), gene_seq.perc('C'),
+                                          gene_seq.perc('G'), gene_seq.perc('T'))
+            else:
+                results = gene_id
+
+            contents = read_contents('output').format(results)
+
+        elif '/geneList' in self.path:        # many subgenes of the same gene. delete them????
+
+            path = self.path.partition('&start=')
+            region = path[0][path[0].index('=') + 1:]
+            start = path[2][:path[2].index('&')]
+            end = path[2][path[2].index('=') + 1:]
+
+            ch_locat = get_json('/overlap/region/human/{}:{}-{}'.format(region, start, end))
+
+            if 'error' in ch_locat:
+                results = ch_locat['error'] + '. Please, try again.'
+
+            elif len(ch_locat) == 0:
+                results = '''There are no genes located in chromosome {} from positions {} to {}.
+                '''.format(region.upper(), start, end)
+
+            else:
+                genes = []
+                for l in ch_locat:
+                    if 'external_name' in l:
+                        genes.append(l['external_name'])
+
+                results = '''The genes located in chromosome {}, from positions {} to {} are:<br><br>
+                    - {}'''.format(region, start, end, '<br>- '.join(genes))
+
+            contents = read_contents('output').format(results)
 
         else:
             contents = read_contents('error')
