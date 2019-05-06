@@ -4,13 +4,17 @@
         <meta charset="utf-8">
         <title>Final project</title>
       </head>
+
       <body style="background-color: khaki;">
           <form action="listSpecies" method="get">
               <fieldset>
                   <legend><h2>List species</h2></legend>
                   Want a limit?: <input type="text" name="limit">
                   <br><br>
+                  Select to retrieve json: <input type="checkbox" name="json" value="1">
+                  <br><br>
                   <input type="submit" value="SEND"/>
+                  &nbsp;<input type="reset" value="RESET"/>
               </fieldset>
           </form>
           <br><br>
@@ -20,7 +24,10 @@
                   Species: <br>
                   <input type="text" name="specie">
                   <br><br>
+                  Select to retrieve json: <input type="checkbox" name="json" value="1"/>
+                  <br><br>
                   <input type="submit" value="SEND"/>
+                  &nbsp;<input type="reset" value="RESET"/>
               </fieldset>
           </form>
           <br><br>
@@ -33,7 +40,10 @@
                   Chromosome: <br>
                   <input type="text" name="chromo">
                   <br><br>
+                  Select to retrieve json: <input type="checkbox" name="json" value="1"/>
+                  <br><br>
                   <input type="submit" value="SEND"/>
+                  &nbsp;<input type="reset" value="RESET"/>
               </fieldset>
           </form>
         <br><br>
@@ -43,7 +53,10 @@
                   Gene: <br>
                   <input type="text" name="gene">
                   <br><br>
+                  Select to retrieve json: <input type="checkbox" name="json" value="1"/>
+                  <br><br>
                   <input type="submit" value="SEND"/>
+                  &nbsp;<input type="reset" value="RESET"/>
               </fieldset>
           </form>
         <br><br>
@@ -53,17 +66,23 @@
                   Gene: <br>
                   <input type="text" name="gene">
                   <br><br>
+                  Select to retrieve json: <input type="checkbox" name="json" value="1"/>
+                  <br><br>
                   <input type="submit" value="SEND"/>
+                  &nbsp;<input type="reset" value="RESET"/>
               </fieldset>
           </form>
         <br><br>
-          <form action="geneCal" method="get">
+          <form action="geneCalc" method="get">
               <fieldset>
                   <legend><h2>Compute gene's length and percentages</h2></legend>
                   Gene: <br>
                   <input type="text" name="gene">
                   <br><br>
+                  Select to retrieve json: <input type="checkbox" name="json" value="1"/>
+                  <br><br>
                   <input type="submit" value="SEND"/>
+                  &nbsp;<input type="reset" value="RESET"/>
               </fieldset>
           </form>
         <br><br>
@@ -79,7 +98,10 @@
                   End position: <br>
                   <input type="text" name="end">
                   <br><br>
+                  Select to retrieve json: <input type="checkbox" name="json" value="1"/>
+                  <br><br>
                   <input type="submit" value="SEND"/>
+                  &nbsp;<input type="reset" value="RESET"/>
               </fieldset>
           </form>
       </body>
