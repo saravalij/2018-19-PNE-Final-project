@@ -1,0 +1,925 @@
+
+This text file contains three test reports, one for each level of the project. In each one of them, different paths (arguments) for
+every endpoint within the corresponding level are tried. Endpoints belonging to a level are indented below the title for that level.
+At the same time, the tried paths within an endpoint are indented below it and follow the "-" mark (so they can be easily recognized
+as tried paths), and the output they produce is right below them.
+
+BASIC LEVEL:
+
+    /listSpecies:
+
+        - http://localhost:8000/listSpecies?limit=7
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">List Species</h1>
+                        <p>1. Abingdon island giant tortoise<br>2. African green monkey<br>3. African savanna elephant<br>4. Agassiz's desert tortoise<br>5. Alpine marmot<br>6. Amazon molly<br>7. American beaver<br></p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/listSpecies
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">List Species</h1>
+                        <p>1. Abingdon island giant tortoise<br>2. African green monkey<br>3. African savanna elephant<br>4. Agassiz's desert tortoise<br>5. Alpine marmot<br>6. Amazon molly<br>7. American beaver<br>8. American bison<br>9. American black bear<br>10. American mink<br>11. American pika<br>12. Angola colobus<br>13. Arctic ground squirrel<br>14. Argentine black and white tegu<br>15. Asian bonytongue<br>16. Atlantic cod<br>17. Australian saltwater crocodile<br>18. Bengalese finch<br>19. Black snub-nosed monkey<br>20. Bolivian squirrel monkey<br>21. Bornean orangutan<br>22. Brazilian guinea pig<br>23. Budgie<br>24. Burton's mouthbrooder<br>25. C.elegans<br>26. Chinese hamster<br>27. Chinese hamster<br>28. Chinese hamster<br>29. Chinese softshell turtle<br>30. Collared flycatcher<br>31. Coquerel's sifaka<br>32. Crab-eating macaque<br>33. Damara mole rat<br>34. Daurian ground squirrel<br>35. Degu<br>36. Domestic ferret<br>37. Domestic sheep<br>38. Drill<br>39. European shrew<br>40. Goat<br>41. Golden hamster<br>42. Golden snub-nosed monkey<br>43. Great tit<br>44. Great spotted kiwi<br>45. Hoffmann's two-fingered sloth<br>46. Indian medaka<br>47. Inshore hagfish<br>48. Japanese medaka hni<br>49. Japanese medaka hsok<br>50. Japanese medaka hdrr<br>51. Japanese quail<br>52. Lesser egyptian jerboa<br>53. Long-tailed chinchilla<br>54. Ma's night monkey<br>55. Makobe island cichlid<br>56. Mexican tetra<br>57. Midas cichlid<br>58. Mongolian gerbil<br>59. Monterrey platyfish<br>60. Nile tilapia<br>61. Northern american deer mouse<br>62. Northern white-cheeked gibbon<br>63. Norway rat<br>64. Okarito brown kiwi<br>65. Olive baboon<br>66. Ord's kangaroo rat<br>67. Paramormyrops kingsleyae<br>68. Periophthalmus magnuspinnatus<br>69. Philippine tarsier<br>70. Pig-tailed macaque<br>71. Polar bear<br>72. Ryukyu mouse<br>73. Sea squirt ciona intestinalis<br>74. Sea squirt ciona savignyi<br>75. Shrew mouse<br>76. Sooty mangabey<br>77. Spoon-billed sandpiper<br>78. Spotted gar<br>79. Tasmanian devil<br>80. Tiger<br>81. Ugandan red colobus<br>82. Upper galilee mountains blind mole rat<br>83. Western lowland gorilla<br>84. Western painted turtle<br>85. White-headed capuchin<br>86. Algerian mouse<br>87. Alpaca<br>88. Baker's yeast<br>89. Ballan wrasse<br>90. Bicolor damselfish<br>91. Birds<br>92. Blue tit<br>93. Blue-crowned manakin<br>94. Bonobo<br>95. Bottlenosed dolphin<br>96. Cape rock hyrax<br>97. Cattle<br>98. Central bearded dragon<br>99. Channel catfish<br>100. Chicken<br>101. Chimpanzee<br>102. Climbing perch<br>103. Clown anemonefish<br>104. Coelacanth<br>105. Common canary<br>106. Common mallard<br>107. Dark-eyed junco<br>108. Dingo<br>109. Dog<br>110. Domestic cat<br>111. Domestic guinea pig<br>112. Domestic turkey<br>113. Donkey<br>114. Eastern european house mouse<br>115. Eastern happy<br>116. Emu<br>117. Fruit fly<br>118. Gelada<br>119. Giant panda<br>120. Golden-collared manakin<br>121. Gray mouse lemur<br>122. Gray short-tailed opossum<br>123. Greater amberjack<br>124. Greater bamboo lemur<br>125. Green anole<br>126. Guppy<br>127. Helmeted guineafowl<br>128. Horse<br>129. House mouse<br>130. House mouse<br>131. House mouse<br>132. House mouse<br>133. House mouse<br>134. House mouse<br>135. House mouse<br>136. House mouse<br>137. House mouse<br>138. House mouse<br>139. House mouse<br>140. House mouse<br>141. House mouse<br>142. Human<br>143. Koala<br>144. Large flying fox<br>145. Leopard<br>146. Little brown bat<br>147. Little spotted kiwi<br>148. Lyretail cichlid<br>149. Mainland tiger snake<br>150. Mangrove rivulus<br>151. Mummichog<br>152. Naked mole-rat<br>153. Naked mole-rat<br>154. Nine-banded armadillo<br>155. Northern pike<br>156. Northern tree shrew<br>157. Ocean sunfish<br>158. Orange clownfish<br>159. Pig<br>160. Pink-footed goose<br>161. Platypus<br>162. Rabbit<br>163. Red fox<br>164. Red-bellied piranha<br>165. Rhesus monkey<br>166. Ruff<br>167. Sailfin molly<br>168. Sea lamprey<br>169. Sheepshead minnow<br>170. Shortfin molly<br>171. Small madagascar hedgehog<br>172. Small-eared galago<br>173. South eastern house mouse<br>174. Southern platyfish<br>175. Spiny chromis<br>176. Spotted green pufferfish<br>177. Steppe mouse<br>178. Swamp eel<br>179. Tammar wallaby<br>180. Thirteen-lined ground squirrel<br>181. Three-spined stickleback<br>182. Tiger tail seahorse<br>183. Tongue sole<br>184. Torafugu<br>185. Tuatara<br>186. Turbot<br>187. Vole<br>188. Western european hedgehog<br>189. Western clawed frog<br>190. Western european house mouse<br>191. Western mosquitofish<br>192. White-throated sparrow<br>193. White-tufted-ear marmoset<br>194. Wild yak<br>195. Yellowtail amberjack<br>196. Zebra finch<br>197. Zebra mbuna<br>198. Zebrafish<br>199. Zig-zag eel<br></p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/listSpecies?limit=
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">List Species</h1>
+                        <p>1. Abingdon island giant tortoise<br>2. African green monkey<br>3. African savanna elephant<br>4. Agassiz's desert tortoise<br>5. Alpine marmot<br>6. Amazon molly<br>7. American beaver<br>8. American bison<br>9. American black bear<br>10. American mink<br>11. American pika<br>12. Angola colobus<br>13. Arctic ground squirrel<br>14. Argentine black and white tegu<br>15. Asian bonytongue<br>16. Atlantic cod<br>17. Australian saltwater crocodile<br>18. Bengalese finch<br>19. Black snub-nosed monkey<br>20. Bolivian squirrel monkey<br>21. Bornean orangutan<br>22. Brazilian guinea pig<br>23. Budgie<br>24. Burton's mouthbrooder<br>25. C.elegans<br>26. Chinese hamster<br>27. Chinese hamster<br>28. Chinese hamster<br>29. Chinese softshell turtle<br>30. Collared flycatcher<br>31. Coquerel's sifaka<br>32. Crab-eating macaque<br>33. Damara mole rat<br>34. Daurian ground squirrel<br>35. Degu<br>36. Domestic ferret<br>37. Domestic sheep<br>38. Drill<br>39. European shrew<br>40. Goat<br>41. Golden hamster<br>42. Golden snub-nosed monkey<br>43. Great tit<br>44. Great spotted kiwi<br>45. Hoffmann's two-fingered sloth<br>46. Indian medaka<br>47. Inshore hagfish<br>48. Japanese medaka hni<br>49. Japanese medaka hsok<br>50. Japanese medaka hdrr<br>51. Japanese quail<br>52. Lesser egyptian jerboa<br>53. Long-tailed chinchilla<br>54. Ma's night monkey<br>55. Makobe island cichlid<br>56. Mexican tetra<br>57. Midas cichlid<br>58. Mongolian gerbil<br>59. Monterrey platyfish<br>60. Nile tilapia<br>61. Northern american deer mouse<br>62. Northern white-cheeked gibbon<br>63. Norway rat<br>64. Okarito brown kiwi<br>65. Olive baboon<br>66. Ord's kangaroo rat<br>67. Paramormyrops kingsleyae<br>68. Periophthalmus magnuspinnatus<br>69. Philippine tarsier<br>70. Pig-tailed macaque<br>71. Polar bear<br>72. Ryukyu mouse<br>73. Sea squirt ciona intestinalis<br>74. Sea squirt ciona savignyi<br>75. Shrew mouse<br>76. Sooty mangabey<br>77. Spoon-billed sandpiper<br>78. Spotted gar<br>79. Tasmanian devil<br>80. Tiger<br>81. Ugandan red colobus<br>82. Upper galilee mountains blind mole rat<br>83. Western lowland gorilla<br>84. Western painted turtle<br>85. White-headed capuchin<br>86. Algerian mouse<br>87. Alpaca<br>88. Baker's yeast<br>89. Ballan wrasse<br>90. Bicolor damselfish<br>91. Birds<br>92. Blue tit<br>93. Blue-crowned manakin<br>94. Bonobo<br>95. Bottlenosed dolphin<br>96. Cape rock hyrax<br>97. Cattle<br>98. Central bearded dragon<br>99. Channel catfish<br>100. Chicken<br>101. Chimpanzee<br>102. Climbing perch<br>103. Clown anemonefish<br>104. Coelacanth<br>105. Common canary<br>106. Common mallard<br>107. Dark-eyed junco<br>108. Dingo<br>109. Dog<br>110. Domestic cat<br>111. Domestic guinea pig<br>112. Domestic turkey<br>113. Donkey<br>114. Eastern european house mouse<br>115. Eastern happy<br>116. Emu<br>117. Fruit fly<br>118. Gelada<br>119. Giant panda<br>120. Golden-collared manakin<br>121. Gray mouse lemur<br>122. Gray short-tailed opossum<br>123. Greater amberjack<br>124. Greater bamboo lemur<br>125. Green anole<br>126. Guppy<br>127. Helmeted guineafowl<br>128. Horse<br>129. House mouse<br>130. House mouse<br>131. House mouse<br>132. House mouse<br>133. House mouse<br>134. House mouse<br>135. House mouse<br>136. House mouse<br>137. House mouse<br>138. House mouse<br>139. House mouse<br>140. House mouse<br>141. House mouse<br>142. Human<br>143. Koala<br>144. Large flying fox<br>145. Leopard<br>146. Little brown bat<br>147. Little spotted kiwi<br>148. Lyretail cichlid<br>149. Mainland tiger snake<br>150. Mangrove rivulus<br>151. Mummichog<br>152. Naked mole-rat<br>153. Naked mole-rat<br>154. Nine-banded armadillo<br>155. Northern pike<br>156. Northern tree shrew<br>157. Ocean sunfish<br>158. Orange clownfish<br>159. Pig<br>160. Pink-footed goose<br>161. Platypus<br>162. Rabbit<br>163. Red fox<br>164. Red-bellied piranha<br>165. Rhesus monkey<br>166. Ruff<br>167. Sailfin molly<br>168. Sea lamprey<br>169. Sheepshead minnow<br>170. Shortfin molly<br>171. Small madagascar hedgehog<br>172. Small-eared galago<br>173. South eastern house mouse<br>174. Southern platyfish<br>175. Spiny chromis<br>176. Spotted green pufferfish<br>177. Steppe mouse<br>178. Swamp eel<br>179. Tammar wallaby<br>180. Thirteen-lined ground squirrel<br>181. Three-spined stickleback<br>182. Tiger tail seahorse<br>183. Tongue sole<br>184. Torafugu<br>185. Tuatara<br>186. Turbot<br>187. Vole<br>188. Western european hedgehog<br>189. Western clawed frog<br>190. Western european house mouse<br>191. Western mosquitofish<br>192. White-throated sparrow<br>193. White-tufted-ear marmoset<br>194. Wild yak<br>195. Yellowtail amberjack<br>196. Zebra finch<br>197. Zebra mbuna<br>198. Zebrafish<br>199. Zig-zag eel<br></p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+        - http://localhost:8000/listSpecies?limit=0
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">List Species</h1>
+                        <p>1. Abingdon island giant tortoise<br>2. African green monkey<br>3. African savanna elephant<br>4. Agassiz's desert tortoise<br>5. Alpine marmot<br>6. Amazon molly<br>7. American beaver<br>8. American bison<br>9. American black bear<br>10. American mink<br>11. American pika<br>12. Angola colobus<br>13. Arctic ground squirrel<br>14. Argentine black and white tegu<br>15. Asian bonytongue<br>16. Atlantic cod<br>17. Australian saltwater crocodile<br>18. Bengalese finch<br>19. Black snub-nosed monkey<br>20. Bolivian squirrel monkey<br>21. Bornean orangutan<br>22. Brazilian guinea pig<br>23. Budgie<br>24. Burton's mouthbrooder<br>25. C.elegans<br>26. Chinese hamster<br>27. Chinese hamster<br>28. Chinese hamster<br>29. Chinese softshell turtle<br>30. Collared flycatcher<br>31. Coquerel's sifaka<br>32. Crab-eating macaque<br>33. Damara mole rat<br>34. Daurian ground squirrel<br>35. Degu<br>36. Domestic ferret<br>37. Domestic sheep<br>38. Drill<br>39. European shrew<br>40. Goat<br>41. Golden hamster<br>42. Golden snub-nosed monkey<br>43. Great tit<br>44. Great spotted kiwi<br>45. Hoffmann's two-fingered sloth<br>46. Indian medaka<br>47. Inshore hagfish<br>48. Japanese medaka hni<br>49. Japanese medaka hsok<br>50. Japanese medaka hdrr<br>51. Japanese quail<br>52. Lesser egyptian jerboa<br>53. Long-tailed chinchilla<br>54. Ma's night monkey<br>55. Makobe island cichlid<br>56. Mexican tetra<br>57. Midas cichlid<br>58. Mongolian gerbil<br>59. Monterrey platyfish<br>60. Nile tilapia<br>61. Northern american deer mouse<br>62. Northern white-cheeked gibbon<br>63. Norway rat<br>64. Okarito brown kiwi<br>65. Olive baboon<br>66. Ord's kangaroo rat<br>67. Paramormyrops kingsleyae<br>68. Periophthalmus magnuspinnatus<br>69. Philippine tarsier<br>70. Pig-tailed macaque<br>71. Polar bear<br>72. Ryukyu mouse<br>73. Sea squirt ciona intestinalis<br>74. Sea squirt ciona savignyi<br>75. Shrew mouse<br>76. Sooty mangabey<br>77. Spoon-billed sandpiper<br>78. Spotted gar<br>79. Tasmanian devil<br>80. Tiger<br>81. Ugandan red colobus<br>82. Upper galilee mountains blind mole rat<br>83. Western lowland gorilla<br>84. Western painted turtle<br>85. White-headed capuchin<br>86. Algerian mouse<br>87. Alpaca<br>88. Baker's yeast<br>89. Ballan wrasse<br>90. Bicolor damselfish<br>91. Birds<br>92. Blue tit<br>93. Blue-crowned manakin<br>94. Bonobo<br>95. Bottlenosed dolphin<br>96. Cape rock hyrax<br>97. Cattle<br>98. Central bearded dragon<br>99. Channel catfish<br>100. Chicken<br>101. Chimpanzee<br>102. Climbing perch<br>103. Clown anemonefish<br>104. Coelacanth<br>105. Common canary<br>106. Common mallard<br>107. Dark-eyed junco<br>108. Dingo<br>109. Dog<br>110. Domestic cat<br>111. Domestic guinea pig<br>112. Domestic turkey<br>113. Donkey<br>114. Eastern european house mouse<br>115. Eastern happy<br>116. Emu<br>117. Fruit fly<br>118. Gelada<br>119. Giant panda<br>120. Golden-collared manakin<br>121. Gray mouse lemur<br>122. Gray short-tailed opossum<br>123. Greater amberjack<br>124. Greater bamboo lemur<br>125. Green anole<br>126. Guppy<br>127. Helmeted guineafowl<br>128. Horse<br>129. House mouse<br>130. House mouse<br>131. House mouse<br>132. House mouse<br>133. House mouse<br>134. House mouse<br>135. House mouse<br>136. House mouse<br>137. House mouse<br>138. House mouse<br>139. House mouse<br>140. House mouse<br>141. House mouse<br>142. Human<br>143. Koala<br>144. Large flying fox<br>145. Leopard<br>146. Little brown bat<br>147. Little spotted kiwi<br>148. Lyretail cichlid<br>149. Mainland tiger snake<br>150. Mangrove rivulus<br>151. Mummichog<br>152. Naked mole-rat<br>153. Naked mole-rat<br>154. Nine-banded armadillo<br>155. Northern pike<br>156. Northern tree shrew<br>157. Ocean sunfish<br>158. Orange clownfish<br>159. Pig<br>160. Pink-footed goose<br>161. Platypus<br>162. Rabbit<br>163. Red fox<br>164. Red-bellied piranha<br>165. Rhesus monkey<br>166. Ruff<br>167. Sailfin molly<br>168. Sea lamprey<br>169. Sheepshead minnow<br>170. Shortfin molly<br>171. Small madagascar hedgehog<br>172. Small-eared galago<br>173. South eastern house mouse<br>174. Southern platyfish<br>175. Spiny chromis<br>176. Spotted green pufferfish<br>177. Steppe mouse<br>178. Swamp eel<br>179. Tammar wallaby<br>180. Thirteen-lined ground squirrel<br>181. Three-spined stickleback<br>182. Tiger tail seahorse<br>183. Tongue sole<br>184. Torafugu<br>185. Tuatara<br>186. Turbot<br>187. Vole<br>188. Western european hedgehog<br>189. Western clawed frog<br>190. Western european house mouse<br>191. Western mosquitofish<br>192. White-throated sparrow<br>193. White-tufted-ear marmoset<br>194. Wild yak<br>195. Yellowtail amberjack<br>196. Zebra finch<br>197. Zebra mbuna<br>198. Zebrafish<br>199. Zig-zag eel<br></p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/listSpecies?limit=a
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">List Species</h1>
+                        <p>Sorry, that is not a valid limit.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/listSpecies?limit=678
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">List Species</h1>
+                        <p>That limit is outrange because there are not so many species.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/listSpecies?limit=-7
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">List Species</h1>
+                        <p>Sorry, that is not a valid limit.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+    /karyotype
+
+        - http://localhost:8000/karyotype?specie=human
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Human karyotype</h1>
+                        <p><br>&#8259;    1<br>&#8259;    2<br>&#8259;    3<br>&#8259;    4<br>&#8259;    5<br>&#8259;    6<br>&#8259;    7<br>&#8259;    8<br>&#8259;    9<br>&#8259;    10<br>&#8259;    11<br>&#8259;    12<br>&#8259;    13<br>&#8259;    14<br>&#8259;    15<br>&#8259;    16<br>&#8259;    17<br>&#8259;    18<br>&#8259;    19<br>&#8259;    20<br>&#8259;    21<br>&#8259;    22<br>&#8259;    X<br>&#8259;    Y<br>&#8259;    MT</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/karyotype?specie=mouse
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Mouse karyotype</h1>
+                        <p><br>&#8259;    1<br>&#8259;    2<br>&#8259;    3<br>&#8259;    4<br>&#8259;    5<br>&#8259;    6<br>&#8259;    7<br>&#8259;    8<br>&#8259;    9<br>&#8259;    10<br>&#8259;    11<br>&#8259;    12<br>&#8259;    13<br>&#8259;    14<br>&#8259;    15<br>&#8259;    16<br>&#8259;    17<br>&#8259;    18<br>&#8259;    19<br>&#8259;    X<br>&#8259;    Y<br>&#8259;    MT</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+
+        - http://localhost:8000/karyotype?specie=sdfghjk
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Sdfghjk karyotype</h1>
+                        <p>Oops! We cannot find that species in our database.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/karyotype?specie=
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;"> karyotype</h1>
+                        <p>In order to retrieve a karyotype, you must tell us which species you want it of.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/karyotype
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Oops!</h1>
+                        <p>Apparently you called an endpoint incorrectly.
+                            Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/karyotype?spe
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Oops!</h1>
+                        <p>Apparently you called an endpoint incorrectly.
+                            Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        -
+        -
+
+    /chromosomeLength
+
+        - http://localhost:8000/chromosomeLength?specie=cow&chromo=5
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Chromosome Length</h1>
+                        <p>The length of chromosome "5" of species "Cow" is 120089316.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/chromosomeLength?chromo=5&specie=cow
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Chromosome Length</h1>
+                        <p>The length of chromosome "5" of species "Cow" is 120089316.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/chromosomeLength?chromo=5&spec=cow
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Oops!</h1>
+                        <p>Apparently you called an endpoint incorrectly.
+                            Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/chromosomeLength?specie=%3F&chromo=3
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Chromosome Length</h1>
+                        <p>Oops! Error. Can not find internal name for species '?'.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+
+        - http://localhost:8000/chromosomeLength?specie=&chromo=
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Oops!</h1>
+                        <p>Apparently you called an endpoint incorrectly.
+                            Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/chromosomeLength?specie=human&chromo=6789
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Chromosome Length</h1>
+                        <p>Oops! Error. No slice found for location 6789.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/chromosomeLength?specie=homoninaodf&chromo=1
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Chromosome Length</h1>
+                        <p>Oops! Error. Can not find internal name for species 'homoninaodf'.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+        -
+        -
+        -
+
+MEDIUM LEVEL:
+
+    /geneSeq
+        - http://localhost:8000/geneSeq?gene=frat1
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene FRAT1 Sequence</h1>
+                        <p>ATTCCGGCTCCCGCGGCTGCAGGCGCGCGGCTAGAGTGCCTGGCGGGCTCCGGCTTCCGCGTCCGCCCCGGCCCCGGTCCAGACTTAGTCTTCAGCTCCGCGCCCGCTCCGCCGCGGCCCACCGCGCCCGCCGGCAGCCGAGCCCCCAGCGACGCCCGCACAGCTCCGGGTGCCCAGACAGGGGGCCATGCCGTGCCGGAGGGAGGAGGAAGAGGAAGCCGGCGAGGAGGCGGAGGGGGAGGAAGAGGAGGAGGACAGCTTCCTCCTACTGCAGCAGTCAGTGGCGCTGGGCAGCTCGGGCGAGGTGGACCGGCTGGTGGCCCAGATCGGCGAGACGCTGCAGCTGGACGCGGCGCAGCACAGCCCGGCCTCGCCGTGCGGGCCCCCGGGGGCGCCGCTGCGGGCCCCGGGGCCCCTGGCTGCGGCGGTGCCGGCGGACAAGGCCAGGTCCCCGGCGGTGCCGCTGCTGCTGCCGCCCGCGTTGGCGGAGACTGTGGGCCCGGCGCCCCCTGGGGTCCTGCGCTGCGCCCTGGGGGACCGCGGCCGCGTGCGGGGCCGCGCTGCGCCCTACTGCGTGGCCGAGCTCGCCACAGGCCCCAGCGCGCTGTCCCCACTGCCCCCTCAGGCCGACCTTGATGGGCCTCCGGGAGCTGGCAAGCAGGGCATCCCGCAGCCGCTGTCGGGTCCGTGCCGGCGAGGATGGCTCCGGGGCGCCGCCGCCTCCCGCCGCCTGCAGCAGCGACGCGGGTCCCAACCAGAAACCCGCACAGGCGACGACGACCCGCACCGGCTTCTGCAGCAGCTAGTGCTCTCTGGAAACCTCATCAAGGAGGCCGTGCGAAGGCTTCATTCGCGACGGCTGCAGTTACGTGCAAAGCTTCCCCAACGCCCGCTCCTGGGACCTCTGTCGGCCCCGGTGCATGAACCCCCTTCGCCTCGCAGCCCTCGCGCGGCCTGCAGTGACCCTGGCGCCTCCGGGAGGGCGCAGCTCAGAACTGGCGACGGCGTTCTTGTGCCTGGCAGCTAACACGCCCGGGGTGGCCACAGCGCCAGCCTCAGACTGGAGGGCAAGGGGTTCCCTTGAGGGCTGCAGTTCTACTCAGGCTGGTGGAGAACTCTGGCTTTTGGAAGCGAGAGTAAAAAGCTAATGACGAGGAACCGAAAAATCGCGAGTGTTTCGCGGGTAACTGGGGTTGAGGGCCAAAATATTTGGAATGAAGGACTTTGGCCCTATTTAAGGCAGATTTTACAGAGCGCACCTCAAACGTACAAGTCAGTAGGACTCCTTATTTGGCGTGACCCGACCTGGCCGCGGAGCCTGCATTTCCTCGCAGCCTCTCAGTGCCCTCCAGCCCCGCGACCATGTGGCCACAATCCACGCTTCTCCGGATCGCGGTGCGCCGGAACCACGGAGGATGATGCCAGTTACTTGCTTTACCTTTTCAGGGCTGGCTCCTGATCCACTTTGGGGGAGGAGAACATGAGTAGATAATTTCAGGGTGCAGCCCAATCTGCCAGACTTAAAAAAACCATCTTGTGTCTTTGGAGGTGCTGCTTAATACCAAACATGCGGTGCCATGAAGGGACCCTTTGGGGGTTGAATAGGAGTTAACCCCTGCGCTCTCTTTGCAACTGTCTCTCTTCTCAGAGTGGTGGGGGAAGGCTGTACGACACGGGTGGGGAAAGGAGGTGGGGGCGGGGAGTATTGAATGGTGGTGGAAGGGTAGAGAGGCGCGGAGTGAACCCCACGCCCTGTCTAAAGTGTATTTTCAGAGCCGGCCCGCCTCTCCTCGGTTCAAGGTCACTGTTTCCTGGGCACGCACTGGGTTGCGGGACAGAGTAGCCAGGTTCTGCCGGTGCTCGGAGAAGAGCGCAGTGTTTTGCAAGTGCTGGAGTCTCCTGAGGACACGCGCGTCGCCGCCACCGCGGGTGTGGGAAAGCGCGGACGTGCTGGGCGGCTGTGCTTCGGTAGGCGACCACCGCCCCTGGCCGCGCTCCGGGCTTTCACGGAAACTCCCGAGACCGGGCCCTGGGTTCCTCCTCTCCTACTCGGCTCTGCAGTCCTACTCAAGCGGGTGGCTCTGGGATCCTGGGGGCCTGGGTTGGGGGCTAGGGAGACGCCATGTGATGGACACTCCAGGGACACACAGCCTAGCACAGCAGCTTATAATGGGCTCTCCGGGGCCATTTGCAATAACAGCTGCAATTCCCTGGATAGACGAGTTGATTTCCTCCCTCTGCCCCTCCCCCAGCCATGCCAGCTGGCCTTTGTAAGTGCAGGAAACCGAGTAGAAAATGTGACCCTCCAAATGGAGAAGCTGCAGGCTTTGCCATTGTGAACCATGGTGAAGTGCTTGGAACATACTGTTCACTCACTCTAAAGGCGCTGAGACTGTGCTGTTGTTCTCGTTTTTATAGTCAATGGCTTGTTCATCATCCAGATGTGGCTACTGACATATCTACACTTCGCACCGGAGTGTCTGGAATTGTGGCTATCCTGATTATAGGATTTTAACTTAACTGAAATGCCTGCTTTGAATAAATGTGTTGGGTTTTTTGTTTGGTTTTATTTTATACTTGCCATCAGTGAAAAAGATGTACAGAACACATTTCTCTGATCTCCATAAACATGAAAACACTTGAAATCTC</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneSeq?gene=FRAT2
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene FRAT2 Sequence</h1>
+                        <p>AGGCGCGTGGCTCGAGTGCCTGGCGGGCTCCGGCTTCCGCGTCCGCCCCTGCTCCGGCTTCGCCCGCAGCTCCGCGCCCGCGGGCAACCAAGCCCCCAGCGAAGCCCGCACAGCTCCGGGTGCCAGGACGGGGGGCCATGCCGTGCCGGAGGGAGGAGGAAGAGGAAGCCGGCGAGGAGGCGGAGGGGGAGGAAGAGGAGGACGACAGCTTCCTCCTGCTGCAGCAGTCGGTGACGCTGGGCAGCTCGGGCGAGGTGGACCGGCTGGTGGCCCAGATCGGCGAGACGCTGCAGCTGGACGCGGCGCAGGACAGCCCGGCCTCGCCGTGCGCGCCCCCGGGGGTGCCGCTGCGGGCCCCGGGGCCCCTGGCTGCGGCGGTGCCGGCGGACAAGGCCCGGCCCCCGGCGGTGCCGCTGCTGCTGCCGCCCGCTTCGGCTGAGACGGTGGGCCCGGCGCCCTCTGGGGCCCTGCGCTGCGCCCTAGGGGACCGCGGCCGCGTGCGCGGACGCGCTGCGCCCTACTGCGTGGCGGAGGTCGCCGCAGGCCCCAGCGCGCTGCCGGGGCCGTGCCGGCGAGGATGGCTCAGGGACGCGGTCACCTCCCGCCGCTTGCAGCAGCGCCGATGGACCCAAGCCGGGGCACGCGCCGGCGACGACGACCCGCATCGGCTCCTCCAGCAGCTCGTGCTCTCGGGAAACCTCATCAAGGAAGCCGTGCGGAGACTCCAACGAGCCGTCGCCGCGGTTGCAGCCACGGGCCCCGCAAGCGCCCCTGGGCCCGGGGGAGGCCGCAGCGGACCTGACCGCATTGCCCTGCAGCCCTCAGGCTCCTTGCTCTGACGCAGGCCTCCTGGAGGAGGAAGTGGAGGCCGCTGCGTAGACCCAACAGCGTCCAGTTCCTACTAACTCTGAGCTGAAGCCGACGTCGCCAGCCTGGGAGCGACCACTTTGGCTGCGGGGAGGCGCGTGGGGAGAGATCTCAACCAGAGAAGTTACCAGCCGCGGCGAGGCCGTCGGAGAAAACTTAAGCGTGGAGAAATGTATGCGCCAGGGTGCTTCCGTGGGGCATGAGAATTTCCCGGGCCATCCAAGCCCAAGGACCTGGGATAAACTGGGAGAACTATGGCAGCTACTTGCATCGACTTGTACCTCACTTAGCCCTTGGGGGCGTCGTGAGCTTGGATTGTTTAAGGAGGGCTCAGGGGTAGGAATCGCGATGGCTTTATAACAATACTTGAAAACTAACGACACGCATACATTTTCTTATTTTCTGGTGGAGGAGCTTAGTAAGTGGTGCTACAATTGCTGTGCAAAGAAATTCCAGAGGGGAGAAGAATGTAAAAGTTTGGTGGTGGGTGGCTTGGCATTGCCCCTTTTTCCCACCGATTCGGTGGCTGGTGAAGGTGGGAGATGTGAACTCCAATTAAGGGACTGGAGAGAGGTGAAGAATTTTGCAGGTGGGAGATTTGGATTTGAATGTGGACTTGTAAATGACTTGACCTTGCCATCTGTGTTCAAGGTCACGGTTTGCTGTGGGGTTCCTGGGAGAGCTTACTCACCCCGGAGTCTTTTCTTTCTCTTGCTCCAAGAAGAGCCCTGTTGGTGCTTTACCACCGCTTGGAGTCTCCCGAGGACACAAACAGGCAGAGAGGGACGTGTAGGGAGAGTTCTTTCCTGTTTTCTGTGCTTTCCTTTTTACAGGACTCCCGGAAGGCCACTCATGGCCATGCCAGGAGCTTTCTCAGAAACAGTCATAAACGATCTCTTGAGTCTCTTTCTTGTCCTCCCAGCTGAGCTTTCTTATTCCACCCTTTCTGGTGTCTATAGGAATGCATGAGAGACCCTGGACGTTTTTCTGCTCTCTTCTGGCCCTCCATGGAGTCATGGGCCTCGGCCTCGGCGGCTCCTCACCCTCACAATTTATTTCCTCCTCCCGTGCCAGCCCTTCTTTTGTGTCTGAAACCGGTTTTAAAATGTGACTCTCCCAGAGAAGAAGCCGCTGGCTGTATGAAACTTGACGGCGCTTTTGTAAGGTGCCACCCCCAAACTTTAAGGTAGCTAAACCAATTTTTAAAAGATTCAATGGCTTGTTCATCCTCCAGATGTAGCTATTGATGTACACTTCGCAACGGAGTGTCTGAAATTGTGGTGGTCCTGATTTATAGGATTTCATAATTAAAATGTCTGCTGAATAAATTTGGCTTTTGTTTTGGA</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneSeq?gene=economy
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene Sequence</h1>
+                        <p>Error. The introduced gene does not exist.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneSeq?gene=
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Oops!</h1>
+                        <p>Apparently you called an endpoint incorrectly.
+                            Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneSeq
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Oops!</h1>
+                        <p>Apparently you called an endpoint incorrectly.
+                            Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneSeq?gene=frat
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene Sequence</h1>
+                        <p>Error. The introduced gene does not exist.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+    /geneInfo
+        - http://localhost:8000/geneInfo?gene=ecop
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene VOPP1 Info</h1>
+                        <p>
+                                    -  ID: ENSG00000154978<br>
+                                    -  In chromosome: 7<br>
+                                    -  Start: 55436056<br>
+                                    -  End: 55572988<br>
+                                    -  Length: 136933<br>
+                                    </p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneInfo?gene=hjkiuygbn
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene Info</h1>
+                        <p>Error. The introduced gene does not exist.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneInfo?
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Oops!</h1>
+                        <p>Apparently you called an endpoint incorrectly.
+                            Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneInfo?ge=frat1
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Oops!</h1>
+                        <p>Apparently you called an endpoint incorrectly.
+                            Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneInfo?gene=45
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene Info</h1>
+                        <p>Error. The introduced gene does not exist.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+    /geneCalc
+        - http://localhost:8000/geneCalc?gene=frat2
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene FRAT2 Calculations</h1>
+                        <p>
+                                    -  Total length: 2213<br>
+                                    -  Percentage of its bases:<br>
+                                    &emsp;-  A: 18.5%<br>
+                                    &emsp;-  C: 28.4%<br>
+                                    &emsp;-  G: 31.9%<br>
+                                    &emsp;-  T: 21.3%</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneCalc?gene=hjk
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene Calculations</h1>
+                        <p>Error. The introduced gene does not exist.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneCalc?gene
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Oops!</h1>
+                        <p>Apparently you called an endpoint incorrectly.
+                            Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneCalc?gene=h+ey
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene Calculations</h1>
+                        <p>Error. The introduced gene does not exist.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneCalc?gene=AL672277.1
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene AL672277.1 Calculations</h1>
+                        <p>
+                                    -  Total length: 4145<br>
+                                    -  Percentage of its bases:<br>
+                                    &emsp;-  A: 21.6%<br>
+                                    &emsp;-  C: 26.2%<br>
+                                    &emsp;-  G: 21.9%<br>
+                                    &emsp;-  T: 30.3%</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+    /geneList
+        - http://localhost:8000/geneList?chromo=x&start=345678&end=5000000
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene List</h1>
+                        <p>The genes located in human chromosome "X", from position 345678 to position 5000000 are:<br>
+                                <br>&emsp;- PPP2R3B<br>&emsp;- AL732314.6<br>&emsp;- RF00017<br>&emsp;- AL732314.4<br>&emsp;- FABP5P13<br>&emsp;- KRT18P53<br>&emsp;- SHOX<br>&emsp;- AL672277.1<br>&emsp;- RPL14P5<br>&emsp;- CRLF2<br>&emsp;- CSF2RA<br>&emsp;- MIR3690<br>&emsp;- RNA5SP498<br>&emsp;- IL3RA<br>&emsp;- SLC25A6<br>&emsp;- LINC00106<br>&emsp;- ASMTL-AS1<br>&emsp;- ASMTL<br>&emsp;- P2RY8<br>&emsp;- AKAP17A<br>&emsp;- ASMT<br>&emsp;- AL683807.1<br>&emsp;- AL683807.2<br>&emsp;- DHRSX<br>&emsp;- DHRSX-IT1<br>&emsp;- ZBED1<br>&emsp;- MIR6089<br>&emsp;- CD99P1<br>&emsp;- LINC00102<br>&emsp;- CD99<br>&emsp;- XG<br>&emsp;- GYG2<br>&emsp;- GYG2-AS1<br>&emsp;- ARSD<br>&emsp;- ARSD-AS1<br>&emsp;- ARSE<br>&emsp;- ARSH<br>&emsp;- ARSF<br>&emsp;- RN7SL578P<br>&emsp;- AC112653.1<br>&emsp;- LINC01546<br>&emsp;- MXRA5<br>&emsp;- ASS1P4<br>&emsp;- SNORA48B<br>&emsp;- RNU6-114P<br>&emsp;- PRKX<br>&emsp;- RNU6-146P<br>&emsp;- RF00019<br>&emsp;- PRKX-AS1<br>&emsp;- AC007685.1<br>&emsp;- BX890604.2<br>&emsp;- BX890604.1<br>&emsp;- AC074035.1</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?chromo=3&start=1&end=2
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene List</h1>
+                        <p>There are no genes located in chromosome "3" from positions 1 to 2.
+                                </p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?chromo=3&end=567890&start=1
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene List</h1>
+                        <p>The genes located in human chromosome "3", from position 1 to position 567890 are:<br>
+                                <br>&emsp;- LINC01986<br>&emsp;- AC066595.1<br>&emsp;- CHL1-AS2<br>&emsp;- CHL1<br>&emsp;- RNU6-1194P<br>&emsp;- RPS8P6<br>&emsp;- CHL1-AS1<br>&emsp;- LINC01266</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?start=1&end=567890&chromo=3
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene List</h1>
+                        <p>The genes located in human chromosome "3", from position 1 to position 567890 are:<br>
+                                <br>&emsp;- LINC01986<br>&emsp;- AC066595.1<br>&emsp;- CHL1-AS2<br>&emsp;- CHL1<br>&emsp;- RNU6-1194P<br>&emsp;- RPS8P6<br>&emsp;- CHL1-AS1<br>&emsp;- LINC01266</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?start=15678&end=56780090&chromo=21
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene List</h1>
+                        <p>Request smaller regions of the sequence. Maximum allowed length of 5000000. Try again.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?chromo=2&start=140424943&end=140624564
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene List</h1>
+                        <p>The genes located in human chromosome "2", from position 140424943 to position 140624564 are:<br>
+                                <br>&emsp;- LRP1B<br>&emsp;- MIR7157</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Oops!</h1>
+                        <p>Apparently you called an endpoint incorrectly.
+                            Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?start=23&end=&chromo=12
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Oops!</h1>
+                        <p>Apparently you called an endpoint incorrectly.
+                            Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?start=23&end=45765&chromo=89
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene List</h1>
+                        <p>No slice found for location 89:23-45765. Try again.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?chromo=6&start=-1&end=78
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene List</h1>
+                        <p>-1 is not a valid start. Try again.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?start=1234567890&end=7&chromo=7
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene List</h1>
+                        <p>Cannot request a slice whose start is greater than its end. Start: 1234567890. End: 7. Try again.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?chromo=&start=&end=
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Oops!</h1>
+                        <p>Apparently you called an endpoint incorrectly.
+                            Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?chromo=16&start=.&end=34
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene List</h1>
+                        <p>Could not decode region 16:.-34. Try again.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?chromo=%3F&start=12&end=1345
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene List</h1>
+                        <p>Location ?:12-1345 not understood. Try again.</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+        - http://localhost:8000/geneList?chromo=1&start=0&end=30000
+
+            <!DOCTYPE html>
+                <html lang="en" dir="ltr" style="margin:10px;">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>Final Project</title>
+                    </head>
+                    <body style="background-color:khaki; margin:20px;">
+                        <h1 style="color:black;">Gene List</h1>
+                        <p>The genes located in human chromosome "1", from position 0 to position 30000 are:<br>
+                                <br>&emsp;- DDX11L1<br>&emsp;- WASH7P<br>&emsp;- MIR6859-1<br>&emsp;- MIR1302-2HG</p>
+                        <br>
+                        <center><a href="/">Main page</a></center>
+                    </body>
+                </html>
+
+
+ADVANCED LEVEL: It's going to be tested through a client (even though the resulting jsons can also be obtained through the
+html web, by simply marking the "json" check box or by typing in the pathway "json=1", as a passed parameter) that make
+multiple requests (at a time) to the server, so the output will be printed on the terminal console.
+
+    List of arguments being requested:
+
+    '/listSpecies?limit=23&json=1', '/karyotype?json=1&specie=human', '/chromosomeLength?json=1',
+    '/geneSeq?gene=starsss&json=1', '/geneCalc?json=1&gene=frat1', '/geneInfo?gene=ecop&json=1',
+    '/geneList?json=1&end=123456&chromo=7&start=789', '/10'
+
+
+    Output (multiple jsons) generated:
+
+
+        {'results': {'1': 'Abingdon island giant tortoise', '2': 'African green monkey', '3': 'African savanna elephant', '4': "Agassiz's desert tortoise", '5': 'Alpine marmot', '6': 'Amazon molly', '7': 'American beaver', '8': 'American bison', '9': 'American black bear', '10': 'American mink', '11': 'American pika', '12': 'Angola colobus', '13': 'Arctic ground squirrel', '14': 'Argentine black and white tegu', '15': 'Asian bonytongue', '16': 'Atlantic cod', '17': 'Australian saltwater crocodile', '18': 'Bengalese finch', '19': 'Black snub-nosed monkey', '20': 'Bolivian squirrel monkey', '21': 'Bornean orangutan', '22': 'Brazilian guinea pig', '23': 'Budgie'}}
+
+
+        {'results': {'1': '1', '2': '2', '3': '3', '4': '4', '5': '5', '6': '6', '7': '7', '8': '8', '9': '9', '10': '10', '11': '11', '12': '12', '13': '13', '14': '14', '15': '15', '16': '16', '17': '17', '18': '18', '19': '19', '20': '20', '21': '21', '22': '22', '23': 'X', '24': 'Y', '25': 'MT'}}
+
+
+        {'error': 'Apparently you called an endpoint incorrectly. \n                Maybe you need to double-check the introduced parameters, or introduce some mandatory ones.'}
+
+
+        {'error': 'Error. The introduced gene does not exist.'}
+
+
+        {'results': {'length': 2649, 'bases percentages': {'A': 18.0, 'C': 30.2, 'G': 32.0, 'T': 19.7}}}
+
+
+        {'results': {'id': 'ENSG00000154978', 'in chromosome': '7', 'start': 55436056, 'end': 55572988, 'length': 136933}}
+
+
+        {'results': {'genes': {'1': 'AC215522.3', '2': 'AC215522.2', '3': 'AC215522.1', '4': 'AC093627.1', '5': 'AC093627.6'}}}
+
+
+        {'error': 'This page does not exist.'}
+
+
+
+
+
+
+
+
+
