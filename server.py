@@ -76,8 +76,9 @@ def check_gene(gene):      # Function that checks whether a gen exists or is val
 
         return 'Error. The introduced gene does not exist.'
 
-    else:                   # In cases where there's more than one entry for the introduced gene, we'll take just
-                            # the first one and work with it.
+    else:
+        # In cases where there's more than one entry for the introduced gene, we'll take just
+        # the first one and work with it.
         return xrefs[0]['id']
 
 
@@ -105,6 +106,8 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
         res_dict = 'n'  # If the arguments passed produce valid outputs, this variable will be renamed and
         # used to retrieve and print different information
+
+        title = 'to_be_determined'  # So no warning appears in PyCharm
 
         if self.path == '/':
             results = 'main'
